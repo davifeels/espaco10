@@ -19,11 +19,11 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* 90% Screen Width Container with Generous Breathing Room */}
-      <div className="w-[90%] max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
+      <div className="w-[90%] max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-14 items-center">
           
-          {/* Left Editorial Text Content (Spacious & Majestic) */}
-          <div className="lg:col-span-7 space-y-8 xl:space-y-10 text-left">
+          {/* Left Editorial Text Content (Spacious, Clear & Majestic) */}
+          <div className="lg:col-span-6 xl:col-span-6 space-y-8 xl:space-y-9 text-left">
             
             {/* Top Forbes/Luxury Editorial Pill */}
             <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md">
@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Main Forbes/High-Fashion Serif Headline with Majestic Breathing Room */}
-            <h1 className="text-5xl sm:text-7xl xl:text-[80px] font-serif text-white tracking-tight leading-[1.06]">
+            <h1 className="text-5xl sm:text-7xl xl:text-[76px] font-serif text-white tracking-tight leading-[1.06]">
               Seu estilo.<br />
               <span className="font-editorial italic font-normal text-zinc-200">Sua identidade.</span><br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-100 to-red-400">
@@ -45,15 +45,15 @@ export const HeroSection: React.FC = () => {
             </h1>
 
             {/* Subtitle with Room to Breathe */}
-            <p className="text-base sm:text-xl text-zinc-300 max-w-2xl font-sans font-light leading-relaxed">
+            <p className="text-base sm:text-lg xl:text-xl text-zinc-300 max-w-xl font-sans font-light leading-relaxed">
               Descubra uma experiência de moda que conecta sofisticação, personalidade e conveniência. Curadoria de excelência para o vestuário feminino e masculino, com atendimento consultivo via WhatsApp e envios nacionais para todo o Brasil.
             </p>
 
             {/* CTAs with Generous Luxury Tactile Depth */}
-            <div className="flex flex-wrap items-center gap-5 pt-3">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-5 pt-2">
               <a
                 href="#catalogo"
-                className="px-9 py-4 rounded-xl bg-gradient-to-r from-red-800 via-red-900 to-red-950 hover:from-red-700 hover:to-red-900 border border-red-700/50 text-white font-sans font-semibold text-xs tracking-[0.14em] uppercase shadow-2xl shadow-red-950/60 flex items-center gap-3 transition-all hover:scale-[1.02] group"
+                className="px-8 sm:px-9 py-4 rounded-xl bg-gradient-to-r from-red-800 via-red-900 to-red-950 hover:from-red-700 hover:to-red-900 border border-red-700/50 text-white font-sans font-semibold text-xs tracking-[0.14em] uppercase shadow-2xl shadow-red-950/60 flex items-center gap-3 transition-all hover:scale-[1.02] group"
               >
                 <span>Explorar Coleção</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -61,14 +61,14 @@ export const HeroSection: React.FC = () => {
 
               <a
                 href="#sobre"
-                className="px-8 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-zinc-300 hover:text-white font-sans font-medium text-xs tracking-[0.12em] uppercase transition-all"
+                className="px-7 sm:px-8 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-zinc-300 hover:text-white font-sans font-medium text-xs tracking-[0.12em] uppercase transition-all"
               >
                 Conhecer a Espaço 10
               </a>
             </div>
 
             {/* Brand Metrics Strip (Spaced & Authoritative) */}
-            <div className="grid grid-cols-3 gap-8 xl:gap-14 pt-10 border-t border-white/[0.08] max-w-xl">
+            <div className="grid grid-cols-3 gap-6 sm:gap-8 xl:gap-12 pt-8 sm:pt-10 border-t border-white/[0.08] max-w-xl">
               <div>
                 <div className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
                   17 <span className="text-red-500 font-editorial italic text-2xl font-normal">Anos</span>
@@ -93,9 +93,9 @@ export const HeroSection: React.FC = () => {
 
           </div>
 
-          {/* Right Luxury Editorial Fashion Showcase (Ample & Balanced) */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+          {/* Right Luxury Editorial Fashion Showcase (Puxado para a Esquerda / Centro) */}
+          <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-start lg:pl-6 xl:pl-10">
+            <div className="relative w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[480px]">
               
               {/* Main Fashion Hero Image (High Fashion Runway & Tailoring Editorial) */}
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/[0.12] group bg-[#0A0C11]">
@@ -123,8 +123,8 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Floating Accent Card 1: 17 Anos Seal with generous breath */}
-              <div className="absolute -top-5 -left-5 sm:-left-8 p-4 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3.5 animate-pulse-luxury">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-800 to-red-950 border border-red-700/40 flex items-center justify-center text-white font-serif font-bold text-base shadow-xl">
+              <div className="absolute -top-4 -left-3 sm:-left-5 p-3.5 sm:p-4 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3 animate-pulse-luxury">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-800 to-red-950 border border-red-700/40 flex items-center justify-center text-white font-serif font-bold text-base shadow-xl">
                   10
                 </div>
                 <div className="text-left">
@@ -133,10 +133,10 @@ export const HeroSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Floating Accent Card 2: National Delivery */}
-              <div className="absolute -bottom-6 -right-5 sm:-right-8 p-4 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.1] flex items-center justify-center text-red-400">
-                  <Truck className="w-5 h-5" />
+              {/* Floating Accent Card 2: National Delivery (Posicionado com folga interna, sem vazar na borda da tela) */}
+              <div className="absolute -bottom-4 right-1 sm:right-3 p-3.5 sm:p-4 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-white/[0.05] border border-white/[0.1] flex items-center justify-center text-red-400">
+                  <Truck className="w-4 h-4" />
                 </div>
                 <div className="text-left">
                   <div className="text-xs font-serif font-semibold text-white">Vendas &amp; Envios Nacionais</div>
