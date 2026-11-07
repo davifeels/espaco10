@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Flame, Star, Tag } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
 export const CollectionsSection: React.FC = () => {
@@ -62,20 +62,20 @@ export const CollectionsSection: React.FC = () => {
   };
 
   return (
-    <section id="colecoes" className="py-24 bg-[#0B0C10] relative">
+    <section id="colecoes" className="py-24 bg-[#07080B] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="space-y-3 max-w-2xl text-left">
-            <span className="text-xs font-bold text-rose-500 uppercase tracking-widest flex items-center gap-1.5">
+            <span className="text-[11px] font-sans font-semibold text-red-400 uppercase tracking-[0.25em] flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5" />
               Coleções &amp; Linhas Estruturadas
             </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
-              Curadoria de Estilo para Cada Momento
+            <h2 className="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+              Curadoria de Estilo para Cada Ocasião
             </h2>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-zinc-400 font-sans font-light">
               Explore cada universo da Espaço 10, com composições visuais exclusivas pensadas para o seu guarda-roupa.
             </p>
           </div>
@@ -83,7 +83,7 @@ export const CollectionsSection: React.FC = () => {
           <a
             href="#catalogo"
             onClick={() => setFilterCategory('Todos')}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-400 hover:text-rose-300 transition-colors self-start md:self-end"
+            className="inline-flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-[0.15em] text-red-400 hover:text-red-300 transition-colors self-start md:self-end"
           >
             <span>Ver Todas as Peças</span>
             <ArrowRight className="w-4 h-4" />
@@ -96,7 +96,7 @@ export const CollectionsSection: React.FC = () => {
           {/* Card 1: Feminino (Wide 7 cols) */}
           <div 
             onClick={() => handleSelectCollection(collections[0].categoryTarget)}
-            className="lg:col-span-7 relative h-96 sm:h-[420px] rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/10"
+            className="lg:col-span-7 relative h-96 sm:h-[420px] rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/[0.08]"
           >
             <img 
               src={collections[0].image} 
@@ -106,23 +106,23 @@ export const CollectionsSection: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
             
             <div className="absolute top-5 left-5">
-              <span className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-rose-600 text-white shadow-lg">
+              <span className="px-3 py-1 rounded-full text-[10px] font-sans font-semibold tracking-[0.15em] uppercase bg-red-900/80 backdrop-blur-md text-white border border-red-700/50 shadow-lg">
                 {collections[0].badge}
               </span>
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
               <div className="space-y-1 text-left">
-                <span className="text-xs text-rose-300 font-mono tracking-wider">{collections[0].countText}</span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                <span className="text-[11px] text-red-300 font-mono tracking-wider">{collections[0].countText}</span>
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
                   {collections[0].title}
                 </h3>
-                <p className="text-xs text-gray-300 max-w-md hidden sm:block">
+                <p className="text-xs text-zinc-300 font-sans font-light max-w-md hidden sm:block">
                   {collections[0].subtitle}
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-rose-600 transition-all flex-shrink-0">
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+              <div className="w-11 h-11 rounded-2xl bg-white/[0.08] backdrop-blur-md border border-white/[0.15] flex items-center justify-center text-white group-hover:bg-red-800 transition-all flex-shrink-0">
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ export const CollectionsSection: React.FC = () => {
           {/* Card 2: Masculino (5 cols) */}
           <div 
             onClick={() => handleSelectCollection(collections[1].categoryTarget)}
-            className="lg:col-span-5 relative h-96 sm:h-[420px] rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/10"
+            className="lg:col-span-5 relative h-96 sm:h-[420px] rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/[0.08]"
           >
             <img 
               src={collections[1].image} 
@@ -140,23 +140,23 @@ export const CollectionsSection: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
             
             <div className="absolute top-5 left-5">
-              <span className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-zinc-800 text-gray-200 border border-zinc-700">
+              <span className="px-3 py-1 rounded-full text-[10px] font-sans font-semibold tracking-[0.15em] uppercase bg-black/60 backdrop-blur-md text-zinc-200 border border-white/[0.1]">
                 {collections[1].badge}
               </span>
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
               <div className="space-y-1 text-left">
-                <span className="text-xs text-zinc-400 font-mono tracking-wider">{collections[1].countText}</span>
-                <h3 className="text-2xl font-extrabold text-white font-heading">
+                <span className="text-[11px] text-zinc-400 font-mono tracking-wider">{collections[1].countText}</span>
+                <h3 className="text-2xl font-serif font-bold text-white">
                   {collections[1].title}
                 </h3>
-                <p className="text-xs text-gray-300 hidden sm:block">
+                <p className="text-xs text-zinc-300 font-sans font-light hidden sm:block">
                   {collections[1].subtitle}
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-rose-600 transition-all flex-shrink-0">
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+              <div className="w-11 h-11 rounded-2xl bg-white/[0.08] backdrop-blur-md border border-white/[0.15] flex items-center justify-center text-white group-hover:bg-red-800 transition-all flex-shrink-0">
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ export const CollectionsSection: React.FC = () => {
           {/* Card 3: Streetwear (4 cols) */}
           <div 
             onClick={() => handleSelectCollection(collections[2].categoryTarget)}
-            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/10"
+            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/[0.08]"
           >
             <img 
               src={collections[2].image} 
@@ -173,20 +173,20 @@ export const CollectionsSection: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
             <div className="absolute top-4 left-4">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-semibold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/[0.1]">
                 {collections[2].badge}
               </span>
             </div>
             <div className="absolute bottom-5 left-5 right-5 text-left">
-              <h3 className="text-xl font-bold text-white font-heading">{collections[2].title}</h3>
-              <p className="text-xs text-gray-300 line-clamp-1">{collections[2].subtitle}</p>
+              <h3 className="text-xl font-serif font-bold text-white">{collections[2].title}</h3>
+              <p className="text-xs text-zinc-300 font-sans font-light line-clamp-1">{collections[2].subtitle}</p>
             </div>
           </div>
 
           {/* Card 4: Destaques (4 cols) */}
           <div 
             onClick={() => handleSelectCollection(collections[3].categoryTarget)}
-            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/10"
+            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/[0.08]"
           >
             <img 
               src={collections[3].image} 
@@ -195,20 +195,20 @@ export const CollectionsSection: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
             <div className="absolute top-4 left-4">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-rose-600/30 text-rose-300 border border-rose-500/40">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-semibold uppercase tracking-wider bg-red-950/60 text-red-200 border border-red-800/40">
                 {collections[3].badge}
               </span>
             </div>
             <div className="absolute bottom-5 left-5 right-5 text-left">
-              <h3 className="text-xl font-bold text-white font-heading">{collections[3].title}</h3>
-              <p className="text-xs text-gray-300 line-clamp-1">{collections[3].subtitle}</p>
+              <h3 className="text-xl font-serif font-bold text-white">{collections[3].title}</h3>
+              <p className="text-xs text-zinc-300 font-sans font-light line-clamp-1">{collections[3].subtitle}</p>
             </div>
           </div>
 
           {/* Card 5: Acessórios (4 cols) */}
           <div 
             onClick={() => handleSelectCollection(collections[4].categoryTarget)}
-            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/10"
+            className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-white/[0.08]"
           >
             <img 
               src={collections[4].image} 
@@ -217,13 +217,13 @@ export const CollectionsSection: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
             <div className="absolute top-4 left-4">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-semibold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/[0.1]">
                 {collections[4].badge}
               </span>
             </div>
             <div className="absolute bottom-5 left-5 right-5 text-left">
-              <h3 className="text-xl font-bold text-white font-heading">{collections[4].title}</h3>
-              <p className="text-xs text-gray-300 line-clamp-1">{collections[4].subtitle}</p>
+              <h3 className="text-xl font-serif font-bold text-white">{collections[4].title}</h3>
+              <p className="text-xs text-zinc-300 font-sans font-light line-clamp-1">{collections[4].subtitle}</p>
             </div>
           </div>
 

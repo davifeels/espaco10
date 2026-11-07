@@ -31,20 +31,20 @@ export const SocialProofSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#0B0C10] relative border-t border-white/5">
+    <section className="py-24 bg-[#07080B] relative border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="space-y-3 text-left max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/15 via-rose-500/15 to-amber-500/15 border border-white/10 text-rose-300 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-red-300 text-[11px] font-sans font-semibold uppercase tracking-[0.2em]">
               <InstagramIcon className="w-3.5 h-3.5" />
               Presença Digital Consolidada
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
-              Acompanhe a Espaço 10 no Instagram
+            <h2 className="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+              Acompanhe a Espaço 10 no <span className="font-editorial italic font-light text-zinc-300">Instagram</span>
             </h2>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-zinc-400 font-sans font-light">
               Mais de 18,9 mil seguidores conectados diariamente aos lançamentos, provadores reais e composições exclusivas.
             </p>
           </div>
@@ -53,11 +53,11 @@ export const SocialProofSection: React.FC = () => {
             href="https://www.instagram.com/espaco_10.pl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-rose-600 to-amber-600 text-white text-xs font-bold shadow-lg shadow-rose-950/40 hover:opacity-90 transition-opacity self-start md:self-end"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-red-950 via-zinc-900 to-black border border-white/[0.1] text-white text-xs font-sans font-semibold tracking-wider uppercase shadow-xl hover:border-red-600/50 transition-colors self-start md:self-end"
           >
-            <InstagramIcon className="w-4 h-4" />
+            <InstagramIcon className="w-4 h-4 text-red-400" />
             <span>@espaco_10.pl</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
           </a>
         </div>
 
@@ -66,7 +66,7 @@ export const SocialProofSection: React.FC = () => {
           {editorialPosts.map((post, idx) => (
             <div
               key={idx}
-              className="group rounded-2xl bg-[#12151F] border border-white/10 overflow-hidden flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group rounded-2xl bg-[#0D0F16] border border-white/[0.08] overflow-hidden flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative aspect-square w-full overflow-hidden bg-zinc-900">
                 <img
@@ -87,14 +87,14 @@ export const SocialProofSection: React.FC = () => {
               </div>
 
               <div className="p-4 text-left space-y-2">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-white">
-                  <InstagramIcon className="w-3.5 h-3.5 text-rose-400" />
+                <div className="flex items-center gap-1.5 text-xs font-sans font-semibold text-white">
+                  <InstagramIcon className="w-3.5 h-3.5 text-red-400" />
                   <span>@espaco_10.pl</span>
                 </div>
-                <p className="text-xs text-gray-300 line-clamp-2">
+                <p className="text-xs text-zinc-300 font-sans font-light line-clamp-2">
                   {post.caption}
                 </p>
-                <div className="pt-2 text-[10px] text-gray-500 font-mono">
+                <div className="pt-2 text-[10px] text-zinc-500 font-mono">
                   * Imagens ilustrativas para referência de estilo da proposta.
                 </div>
               </div>

@@ -5,9 +5,8 @@ import {
   Ruler, 
   MessageSquare, 
   CheckCircle, 
-  ArrowRight,
-  ShieldCheck,
-  Sparkles
+  ShieldCheck, 
+  Sparkles 
 } from 'lucide-react';
 
 export const BuyingExperienceSection: React.FC = () => {
@@ -50,19 +49,19 @@ export const BuyingExperienceSection: React.FC = () => {
   ];
 
   return (
-    <section id="experiencia" className="py-24 bg-[#0B0C10] relative border-t border-white/5">
+    <section id="experiencia" className="py-24 bg-[#07080B] relative border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-600/15 border border-rose-500/30 text-rose-300 text-xs font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-rose-400" />
-            Jornada de Compra Humanizada
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/30 border border-red-800/30 text-red-300 text-[11px] font-sans font-semibold uppercase tracking-[0.2em]">
+            <Sparkles className="w-3.5 h-3.5 text-red-400" />
+            Jornada de Compra Consultiva
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
-            Como Funciona a Experiência Espaço 10
+          <h2 className="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+            Como Funciona a Experiência <span className="font-editorial italic font-light text-zinc-300">Espaço 10</span>
           </h2>
-          <p className="text-sm sm:text-base text-gray-400">
+          <p className="text-sm sm:text-base text-zinc-400 font-sans font-light">
             A união da agilidade de um catálogo digital moderno com o carinho e o atendimento consultivo que tornaram a marca querida há 17 anos.
           </p>
         </div>
@@ -70,37 +69,37 @@ export const BuyingExperienceSection: React.FC = () => {
         {/* 5 Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative">
           
-          {steps.map((item, index) => {
+          {steps.map((item) => {
             const Icon = item.icon;
             return (
               <div 
                 key={item.step}
-                className="p-6 rounded-2xl bg-[#12151F] border border-white/10 hover:border-rose-500/40 transition-all hover:-translate-y-1 group flex flex-col justify-between shadow-xl text-left"
+                className="p-6 rounded-2xl bg-[#0D0F16] border border-white/[0.08] hover:border-red-800/40 transition-all hover:-translate-y-1 group flex flex-col justify-between shadow-xl text-left"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-black text-rose-500 font-heading">
+                    <span className="text-2xl font-serif font-bold text-red-500">
                       {item.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 group-hover:text-rose-400 group-hover:bg-rose-500/10 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-zinc-400 group-hover:text-red-400 group-hover:bg-red-950/30 transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-rose-400 font-semibold block mb-1">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-red-400 font-semibold block mb-1">
                     {item.tag}
                   </span>
 
-                  <h3 className="text-base font-bold text-white font-heading mb-2">
+                  <h3 className="text-base font-serif font-semibold text-white mb-2">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs text-gray-400 leading-relaxed">
+                  <p className="text-xs text-zinc-400 font-sans font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-white/5 text-[11px] text-gray-500 flex items-center gap-1">
+                <div className="pt-4 mt-4 border-t border-white/[0.06] text-[11px] text-zinc-500 flex items-center gap-1 font-sans">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Processo Transparente</span>
                 </div>

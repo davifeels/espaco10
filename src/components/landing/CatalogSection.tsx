@@ -1,18 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { 
   Search, 
-  Filter, 
   MessageSquare, 
   Eye, 
   Sparkles, 
   X, 
-  Check, 
   SlidersHorizontal,
   Layers,
   ShoppingBag
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { Product } from '../../types';
 
 export const CatalogSection: React.FC = () => {
   const { 
@@ -34,12 +31,6 @@ export const CatalogSection: React.FC = () => {
 
   const categories = ['Todos', 'Feminino', 'Masculino', 'Streetwear', 'Alfaiataria', 'Acessórios'];
   const sizeOptions = ['Todos', 'PP', 'P', 'M', 'G', 'GG', '38', '40', '42', '44'];
-  const priceOptions = [
-    { label: 'Todos os preços', value: 'Todos' },
-    { label: 'Até R$ 200', value: 'under-200' },
-    { label: 'R$ 200 a R$ 300', value: '200-300' },
-    { label: 'Acima de R$ 300', value: 'above-300' },
-  ];
 
   // Filtering Logic
   const filteredProducts = useMemo(() => {
@@ -87,45 +78,46 @@ export const CatalogSection: React.FC = () => {
   const hasActiveFilters = filterCategory !== 'Todos' || searchQuery !== '' || selectedSizeFilter !== 'Todos' || selectedPriceRange !== 'Todos' || onlyNew;
 
   return (
-    <section id="catalogo" className="py-24 bg-[#08090C] relative border-t border-white/5">
+    <section id="catalogo" className="py-24 bg-[#08090C] relative border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-600/15 border border-rose-500/30 text-rose-300 text-xs font-semibold uppercase tracking-wider">
-            <Layers className="w-3.5 h-3.5 text-rose-400" />
-            Catálogo Interativo Demonstrativo
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-zinc-300 text-[11px] font-sans font-semibold uppercase tracking-[0.2em]">
+            <Layers className="w-3.5 h-3.5 text-red-500" />
+            Catálogo Interativo de Alta Moda
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
             Vitrine Digital Espaço 10
           </h2>
-          <p className="text-sm text-gray-400">
-            Navegue pelas peças, filtre por tamanho ou categoria e inicie uma conversa no WhatsApp com a peça e os tamanhos já preenchidos.
+          <p className="text-sm text-zinc-400 font-sans font-light">
+            Selecione uma peça, confira medidas em centímetros e inicie atendimento direto com os consultores no WhatsApp.
           </p>
-          <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] inline-block font-mono">
-            * Ambiente de demonstração conceitual: produtos, preços e disponibilidades são ilustrativos.
+          <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.07] text-zinc-400 text-[11px] inline-block font-mono">
+            * Demonstração comercial conceitual: peças, estoques e valores são ilustrativos.
           </div>
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="bg-[#12151F] border border-white/10 rounded-2xl p-5 mb-10 shadow-xl space-y-4">
+        <div className="bg-[#0D0F16] border border-white/[0.08] rounded-2xl p-5 mb-10 shadow-2xl space-y-4">
           
           {/* Top Row: Search & Sorting */}
           <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
             {/* Search Input */}
             <div className="relative flex-1">
-              <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Buscar por nome de peça, blazer, vestido, camiseta..."
+                placeholder="Pesquisar por blazer, vestido midi, camisa linho, alfaiataria..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-rose-500 transition-colors"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-black/40 border border-white/[0.08] text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-600 transition-colors font-sans"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+                  aria-label="Limpar pesquisa"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -134,14 +126,14 @@ export const CatalogSection: React.FC = () => {
 
             {/* Sort & Toggle */}
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 text-xs text-gray-400 whitespace-nowrap">
-                <SlidersHorizontal className="w-3.5 h-3.5 text-rose-400" />
+              <div className="flex items-center gap-2 text-xs text-zinc-400 whitespace-nowrap font-sans">
+                <SlidersHorizontal className="w-3.5 h-3.5 text-red-500" />
                 <span className="hidden sm:inline">Ordenar:</span>
               </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-3 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-xs text-white focus:outline-none focus:border-rose-500 cursor-pointer"
+                className="px-3.5 py-2 rounded-xl bg-black/40 border border-white/[0.08] text-xs text-white focus:outline-none focus:border-red-600 cursor-pointer font-sans"
               >
                 <option value="featured">Destaques</option>
                 <option value="popular">Mais Consultados</option>
@@ -151,28 +143,28 @@ export const CatalogSection: React.FC = () => {
 
               <button
                 onClick={() => setOnlyNew(!onlyNew)}
-                className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                className={`px-3.5 py-2 rounded-xl text-xs font-sans font-medium border transition-all whitespace-nowrap flex items-center gap-1.5 ${
                   onlyNew 
-                    ? 'bg-rose-600 border-rose-500 text-white' 
-                    : 'bg-zinc-900 border-zinc-700 text-gray-300 hover:border-gray-500'
+                    ? 'bg-red-800 border-red-700 text-white' 
+                    : 'bg-black/40 border-white/[0.08] text-zinc-300 hover:border-zinc-600'
                 }`}
               >
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3.5 h-3.5 text-red-400" />
                 <span>Novidades</span>
               </button>
             </div>
           </div>
 
-          {/* Bottom Row: Category Chips */}
+          {/* Category Chips (Forbes Haute Couture Style) */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 scrollbar-none">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilterCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border ${
+                className={`px-4 py-2 rounded-xl text-xs font-sans font-medium whitespace-nowrap transition-all border ${
                   filterCategory === cat
-                    ? 'bg-rose-600 border-rose-500 text-white shadow-md shadow-rose-950/50'
-                    : 'bg-zinc-900/60 border-zinc-800 text-gray-300 hover:border-zinc-600 hover:text-white'
+                    ? 'bg-gradient-to-r from-red-800 to-red-950 border-red-700/60 text-white shadow-xl shadow-red-950/40'
+                    : 'bg-black/30 border-white/[0.06] text-zinc-400 hover:border-white/[0.15] hover:text-white'
                 }`}
               >
                 {cat}
@@ -180,11 +172,10 @@ export const CatalogSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Secondary Row: Sizes & Price Filters */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-zinc-800 text-xs">
-            {/* Sizes */}
+          {/* Sizes Row */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-white/[0.06] text-xs">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-gray-400 font-medium">Tamanho:</span>
+              <span className="text-zinc-400 font-sans">Tamanho:</span>
               {sizeOptions.map((sz) => (
                 <button
                   key={sz}
@@ -192,7 +183,7 @@ export const CatalogSection: React.FC = () => {
                   className={`px-2.5 py-1 rounded-md text-[11px] font-mono transition-colors ${
                     selectedSizeFilter === sz
                       ? 'bg-white text-black font-bold'
-                      : 'bg-zinc-900 text-gray-400 hover:text-white'
+                      : 'bg-white/[0.04] text-zinc-400 hover:text-white'
                   }`}
                 >
                   {sz}
@@ -200,11 +191,10 @@ export const CatalogSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Clear All Filters */}
             {hasActiveFilters && (
               <button
                 onClick={clearFilters}
-                className="text-xs text-rose-400 hover:text-rose-300 underline font-medium cursor-pointer"
+                className="text-xs text-red-400 hover:text-red-300 underline font-medium cursor-pointer"
               >
                 Limpar todos os filtros ({filteredProducts.length} itens encontrados)
               </button>
@@ -215,17 +205,17 @@ export const CatalogSection: React.FC = () => {
 
         {/* Product Cards Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-[#10121A] rounded-3xl border border-white/5 space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-full bg-zinc-800 flex items-center justify-center text-gray-400">
+          <div className="text-center py-20 bg-[#0E1017] rounded-3xl border border-white/[0.06] space-y-4">
+            <div className="w-16 h-16 mx-auto rounded-full bg-zinc-800 flex items-center justify-center text-zinc-400">
               <Search className="w-8 h-8" />
             </div>
-            <h3 className="text-lg font-bold text-white">Nenhum produto encontrado com os filtros atuais</h3>
-            <p className="text-xs text-gray-400 max-w-sm mx-auto">
+            <h3 className="text-lg font-serif font-bold text-white">Nenhum produto encontrado com os filtros atuais</h3>
+            <p className="text-xs text-zinc-400 max-w-sm mx-auto font-sans font-light">
               Tente buscar por termos mais genéricos ou desmarque os filtros de tamanho e categoria.
             </p>
             <button
               onClick={clearFilters}
-              className="px-5 py-2.5 rounded-xl bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500 transition-colors"
+              className="px-5 py-2.5 rounded-xl bg-red-800 text-white text-xs font-semibold hover:bg-red-700 transition-colors"
             >
               Resetar Filtros
             </button>
@@ -235,7 +225,7 @@ export const CatalogSection: React.FC = () => {
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="group rounded-2xl bg-[#11131B] border border-white/10 hover:border-rose-500/40 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl hover:shadow-2xl hover:shadow-rose-950/20"
+                className="group rounded-2xl bg-[#0D0F16] border border-white/[0.08] hover:border-red-800/40 overflow-hidden flex flex-col justify-between transition-all duration-400 hover:-translate-y-1.5 shadow-xl hover:shadow-2xl hover:shadow-red-950/20"
               >
                 {/* Image Container with Badges */}
                 <div 
@@ -244,20 +234,20 @@ export const CatalogSection: React.FC = () => {
                 >
                   <img
                     src={product.images[0]}
-                    alt={product.name}
+                    alt={`Foto da peça ${product.name}`}
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                   {/* Top Badges */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
                     {product.isNew && (
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-600 text-white shadow-lg">
+                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-sans font-bold uppercase tracking-[0.15em] bg-red-900/90 text-white shadow-lg border border-red-700/50">
                         Novidade
                       </span>
                     )}
                     {product.isBestSeller && (
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500 text-black shadow-lg">
+                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-sans font-bold uppercase tracking-[0.15em] bg-white/90 text-black shadow-lg">
                         Best Seller
                       </span>
                     )}
@@ -265,15 +255,15 @@ export const CatalogSection: React.FC = () => {
 
                   {/* Demonstrative Pill */}
                   <div className="absolute top-3 right-3">
-                    <span className="px-2 py-0.5 rounded text-[9px] font-mono uppercase bg-black/60 backdrop-blur-md text-gray-300 border border-white/10">
+                    <span className="px-2 py-0.5 rounded text-[8.5px] font-mono uppercase bg-black/70 backdrop-blur-md text-zinc-300 border border-white/[0.08]">
                       Demonstrativo
                     </span>
                   </div>
 
-                  {/* Hover Quick Action Eye Overlay */}
+                  {/* Hover Quick Action */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <span className="px-3 py-1.5 rounded-lg bg-black/80 backdrop-blur-md border border-white/20 text-white text-xs font-semibold flex items-center gap-1.5 shadow-xl">
-                      <Eye className="w-3.5 h-3.5 text-rose-400" />
+                    <span className="px-3.5 py-1.5 rounded-lg bg-black/80 backdrop-blur-md border border-white/[0.15] text-white text-xs font-sans font-medium flex items-center gap-1.5 shadow-xl">
+                      <Eye className="w-3.5 h-3.5 text-red-400" />
                       Visualizar Detalhes
                     </span>
                   </div>
@@ -283,29 +273,29 @@ export const CatalogSection: React.FC = () => {
                 <div className="p-4 flex-1 flex flex-col justify-between text-left space-y-3">
                   
                   <div>
-                    <div className="flex items-center justify-between text-[11px] text-zinc-400 mb-1">
+                    <div className="flex items-center justify-between text-[11px] text-zinc-400 mb-1 font-sans">
                       <span>{product.category} • {product.gender}</span>
-                      <span className="font-mono text-emerald-400">Em estoque ({product.stockCount})</span>
+                      <span className="font-mono text-emerald-400 text-[10px]">Em estoque ({product.stockCount})</span>
                     </div>
 
                     <h3 
                       onClick={() => setSelectedProduct(product)}
-                      className="text-sm font-bold text-white font-heading hover:text-rose-400 transition-colors line-clamp-1 cursor-pointer"
+                      className="text-sm font-serif font-bold text-white hover:text-red-400 transition-colors line-clamp-1 cursor-pointer leading-tight"
                     >
                       {product.name}
                     </h3>
                   </div>
 
-                  {/* Sizes & Colors preview */}
+                  {/* Sizes preview */}
                   <div className="flex items-center justify-between pt-1">
                     <div className="flex gap-1">
                       {product.sizes.slice(0, 4).map((s) => (
-                        <span key={s} className="px-1.5 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-[10px] font-mono text-gray-300">
+                        <span key={s} className="px-1.5 py-0.5 rounded bg-black/40 border border-white/[0.06] text-[10px] font-mono text-zinc-300">
                           {s}
                         </span>
                       ))}
                       {product.sizes.length > 4 && (
-                        <span className="text-[10px] text-gray-500 self-center">+{product.sizes.length - 4}</span>
+                        <span className="text-[10px] text-zinc-500 self-center">+{product.sizes.length - 4}</span>
                       )}
                     </div>
 
@@ -313,7 +303,7 @@ export const CatalogSection: React.FC = () => {
                       {product.colors.map((c) => (
                         <div
                           key={c.name}
-                          className="w-3.5 h-3.5 rounded-full border border-zinc-700 shadow-sm"
+                          className="w-3 h-3 rounded-full border border-zinc-700 shadow-sm"
                           style={{ backgroundColor: c.hex }}
                           title={c.name}
                         />
@@ -322,27 +312,27 @@ export const CatalogSection: React.FC = () => {
                   </div>
 
                   {/* Price Row */}
-                  <div className="flex items-baseline justify-between pt-2 border-t border-zinc-800/80">
+                  <div className="flex items-baseline justify-between pt-2 border-t border-white/[0.06]">
                     <div>
-                      <div className="text-base font-extrabold text-white font-mono">
+                      <div className="text-base font-serif font-bold text-white tracking-tight">
                         R$ {product.price.toFixed(2).replace('.', ',')}
                       </div>
                       {product.originalPrice && (
-                        <span className="text-[10px] line-through text-gray-500 font-mono">
+                        <span className="text-[10px] line-through text-zinc-500 font-mono">
                           R$ {product.originalPrice.toFixed(2).replace('.', ',')}
                         </span>
                       )}
                     </div>
-                    <span className="text-[10px] text-rose-400 font-medium">
+                    <span className="text-[10px] text-red-400 font-serif italic">
                       Consulta direta
                     </span>
                   </div>
 
-                  {/* Primary Consultation WhatsApp Button */}
+                  {/* Buttons */}
                   <div className="grid grid-cols-4 gap-2 pt-1">
                     <button
                       onClick={() => handleDirectWhatsAppInquiry(product)}
-                      className="col-span-3 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-950/40 transition-colors"
+                      className="col-span-3 py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-sans font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-950/40 transition-colors"
                       title="Consultar pelo WhatsApp"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
@@ -353,10 +343,11 @@ export const CatalogSection: React.FC = () => {
                       onClick={() => addToInquiry(product)}
                       className={`col-span-1 rounded-xl border flex items-center justify-center transition-colors ${
                         isInInquiry(product.id)
-                          ? 'bg-rose-600/30 border-rose-500/50 text-rose-300'
-                          : 'bg-zinc-900 hover:bg-zinc-800 border-zinc-700 text-gray-300'
+                          ? 'bg-red-950/50 border-red-800 text-red-300'
+                          : 'bg-white/[0.04] hover:bg-white/[0.08] border-white/[0.08] text-zinc-300'
                       }`}
                       title={isInInquiry(product.id) ? 'Item salvo na lista' : 'Salvar na lista'}
+                      aria-label="Salvar na lista"
                     >
                       <ShoppingBag className="w-4 h-4" />
                     </button>

@@ -2,57 +2,58 @@ import React from 'react';
 import { 
   ArrowRight, 
   Truck, 
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-radial from-[#181C26] via-[#0B0C10] to-[#060709]"
+      className="relative min-h-[94vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-radial from-[#12141D] via-[#08090C] to-[#040507]"
     >
-      {/* Background Subtle Ambience Lights */}
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-rose-600/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-rose-800/10 rounded-full blur-[160px] pointer-events-none" />
+      {/* Background Subtle Ambience Lights - Aristocratic Carmine & Charcoal */}
+      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-red-950/25 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-[550px] h-[550px] bg-red-900/15 rounded-full blur-[180px] pointer-events-none" />
 
-      {/* Decorative Grid Mesh */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+      {/* Decorative Ultra-fine Grid Mesh */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
-          {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          {/* Left Editorial Text Content */}
+          <div className="lg:col-span-7 space-y-7 text-left">
             
-            {/* Top Pill / Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-              <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
-              <span className="text-xs font-semibold tracking-wider uppercase text-gray-300">
+            {/* Top Forbes/Luxury Editorial Pill */}
+            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-[11px] font-sans font-semibold tracking-[0.2em] uppercase text-zinc-300">
                 17 Anos de História • Planaltina-GO
               </span>
-              <span className="text-gray-500">•</span>
-              <span className="text-xs text-rose-400 font-bold">Nova Experiência Digital</span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-[11px] font-serif italic text-red-400">Curadoria Exclusiva</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-extrabold text-white font-heading tracking-tight leading-[1.08]">
+            {/* Main Forbes/High-Fashion Serif Headline */}
+            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-serif text-white tracking-tight leading-[1.08]">
               Seu estilo.<br />
-              Sua identidade.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-200 to-rose-500">
+              <span className="font-editorial italic font-normal text-zinc-200">Sua identidade.</span><br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-100 to-red-400">
                 Seu espaço.
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg text-gray-300 max-w-xl font-normal leading-relaxed">
-              Descubra uma experiência de moda que conecta estilo, personalidade e praticidade. Curadoria premium para o guarda-roupa feminino e masculino, com atendimento humanizado via WhatsApp e envios para todo o Brasil.
+            {/* Subtitle with High-Society Polish */}
+            <p className="text-base sm:text-lg text-zinc-300 max-w-xl font-sans font-light leading-relaxed">
+              Descubra uma experiência de moda que conecta sofisticação, personalidade e conveniência. Curadoria de excelência para o vestuário feminino e masculino, com atendimento consultivo via WhatsApp e envios nacionais para todo o Brasil.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs with Luxury Tactile Depth */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#catalogo"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-bold text-sm tracking-wide shadow-xl shadow-rose-950/50 flex items-center gap-3 transition-all hover:scale-[1.02] group"
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-red-800 via-red-900 to-red-950 hover:from-red-700 hover:to-red-900 border border-red-700/50 text-white font-sans font-semibold text-xs tracking-[0.12em] uppercase shadow-2xl shadow-red-950/60 flex items-center gap-3 transition-all hover:scale-[1.02] group"
               >
                 <span>Explorar Coleção</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -60,86 +61,86 @@ export const HeroSection: React.FC = () => {
 
               <a
                 href="#sobre"
-                className="px-7 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-gray-200 hover:text-white font-semibold text-sm tracking-wide transition-all"
+                className="px-7 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-zinc-300 hover:text-white font-sans font-medium text-xs tracking-[0.1em] uppercase transition-all"
               >
                 Conhecer a Espaço 10
               </a>
             </div>
 
-            {/* Brand Metrics Strip */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-lg">
+            {/* Brand Metrics Strip (Forbes Editorial Authority) */}
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/[0.08] max-w-lg">
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
-                  17 <span className="text-rose-500 text-xl">Anos</span>
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
+                  17 <span className="text-red-500 font-editorial italic text-xl font-normal">Anos</span>
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">Trajetória e confiança consolidada</p>
+                <p className="text-[11px] text-zinc-400 font-sans mt-0.5">Solidez &amp; Confiança</p>
               </div>
 
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
                   +18,9k
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">Seguidores no Instagram</p>
+                <p className="text-[11px] text-zinc-400 font-sans mt-0.5">Seguidores no Instagram</p>
               </div>
 
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
                   100%
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">Envios para todo o Brasil</p>
+                <p className="text-[11px] text-zinc-400 font-sans mt-0.5">Envios para todo o Brasil</p>
               </div>
             </div>
 
           </div>
 
-          {/* Right Fashion Composition Visual */}
+          {/* Right Luxury Editorial Fashion Showcase Visual */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
-              {/* Main Fashion Hero Image */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
+              {/* Main Fashion Hero Image (High Fashion Runway & Tailoring Editorial) */}
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/[0.12] group bg-[#0A0C11]">
                 <img
-                  src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
-                  alt="Editorial de Moda Espaço 10"
+                  src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85"
+                  alt="Editorial de Alta Moda Espaço 10"
                   className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                 />
                 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                {/* Subtle Cinematic Vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30" />
 
                 {/* Floating Bottom Card Inside Image */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 text-left space-y-1">
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/[0.12] text-left space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold text-rose-400 uppercase tracking-wider">
-                      Preview Primavera / Outono 2026
+                    <span className="text-[10px] font-sans font-bold tracking-[0.2em] text-red-400 uppercase">
+                      Edição Limitada 2026
                     </span>
-                    <span className="text-[10px] text-gray-400">Coleção Exclusiva</span>
+                    <span className="text-[10px] font-editorial italic text-zinc-400">Haute Couture</span>
                   </div>
-                  <h3 className="text-sm font-bold text-white font-heading">
-                    Alfaiataria Descontraída &amp; Streetwear Urbano
+                  <h3 className="text-base font-serif font-semibold text-white">
+                    Alfaiataria Contemporânea &amp; Urban Chic
                   </h3>
                 </div>
               </div>
 
-              {/* Floating Accent Card 1: 17 Anos Badge */}
-              <div className="absolute -top-4 -left-4 sm:-left-8 p-3.5 rounded-2xl bg-[#141722]/90 backdrop-blur-xl border border-white/15 shadow-2xl flex items-center gap-3 animate-pulse-subtle">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center text-white font-black font-heading shadow-lg shadow-rose-950/50">
+              {/* Floating Accent Card 1: 17 Anos Seal */}
+              <div className="absolute -top-4 -left-4 sm:-left-8 p-3.5 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3 animate-pulse-luxury">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-800 to-red-950 border border-red-700/40 flex items-center justify-center text-white font-serif font-bold text-sm shadow-xl">
                   10
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-white">Espaço 10 Experience</div>
-                  <div className="text-[10px] text-gray-400">Desde 2007 • Planaltina-GO</div>
+                <div className="text-left">
+                  <div className="text-xs font-serif font-semibold text-white">Espaço 10 Experience</div>
+                  <div className="text-[9.5px] font-sans text-zinc-400">Planaltina-GO • Desde 2007</div>
                 </div>
               </div>
 
               {/* Floating Accent Card 2: National Delivery */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 p-3.5 rounded-2xl bg-[#141722]/90 backdrop-blur-xl border border-white/15 shadow-2xl flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+              <div className="absolute -bottom-6 -right-4 sm:-right-6 p-3.5 rounded-2xl bg-[#0D0F16]/95 backdrop-blur-xl border border-white/[0.12] shadow-2xl flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-white/[0.05] border border-white/[0.1] flex items-center justify-center text-red-400">
                   <Truck className="w-4 h-4" />
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-white">Vendas &amp; Envios Nacionais</div>
-                  <div className="text-[10px] text-emerald-400">Rastreamento Assistido via WhatsApp</div>
+                <div className="text-left">
+                  <div className="text-xs font-serif font-semibold text-white">Vendas &amp; Envios Nacionais</div>
+                  <div className="text-[9.5px] font-sans text-zinc-400">Atendimento Consultivo via WhatsApp</div>
                 </div>
               </div>
 
@@ -149,13 +150,13 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="pt-16 pb-4 flex justify-center">
+        <div className="pt-16 pb-2 flex justify-center">
           <a
             href="#sobre"
-            className="flex flex-col items-center gap-2 text-xs text-gray-500 hover:text-rose-400 transition-colors"
+            className="flex flex-col items-center gap-2 text-[11px] font-sans tracking-[0.16em] uppercase text-zinc-500 hover:text-white transition-colors"
           >
-            <span>Descubra a história e a nova proposta</span>
-            <ChevronDown className="w-4 h-4 animate-bounce" />
+            <span>Conheça a história e a nova proposta</span>
+            <ChevronDown className="w-4 h-4 animate-bounce text-red-500" />
           </a>
         </div>
       </div>

@@ -2,72 +2,73 @@
 
 @layer base {
   :root {
-    --font-heading: 'Syne', sans-serif;
-    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-editorial: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   body {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #07080B;
+    color: #E2E8F0;
   }
 
-  h1, h2, h3, h4, .font-heading {
+  h1, h2, h3, .font-heading, .font-serif-luxury {
     font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
   }
 }
 
 /* Custom smooth scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f1117;
+  background: #090A0E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #272d3b;
-  border-radius: 4px;
+  background: #1F2430;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #e11d48;
+  background: #B91C1C;
 }
 
-/* Glassmorphism helpers */
-.glass-panel {
-  background: rgba(18, 20, 26, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* Glassmorphism Luxury Editorial Helpers */
+.glass-panel-luxury {
+  background: rgba(14, 16, 23, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.glass-panel-light {
-  background: rgba(255, 255, 255, 0.85);
+.glass-card-luxury {
+  background: rgba(17, 19, 27, 0.65);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-card {
-  background: rgba(23, 26, 35, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.glass-card-luxury:hover {
+  border-color: rgba(185, 28, 28, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(185, 28, 28, 0.18);
 }
 
-.glass-card:hover {
-  border-color: rgba(225, 29, 72, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px -12px rgba(225, 29, 72, 0.15);
-}
-
-/* Badge pulse animation */
-@keyframes pulse-subtle {
+/* Luxury glow animations */
+@keyframes pulse-gold {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.03); }
+  50% { opacity: 0.85; transform: scale(1.02); }
 }
 
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s infinite ease-in-out;
+.animate-pulse-luxury {
+  animation: pulse-gold 4s infinite ease-in-out;
 }
