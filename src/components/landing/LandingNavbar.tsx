@@ -40,31 +40,34 @@ export const LandingNavbar: React.FC<LandingNavbarProps> = ({ onOpenInquiryList 
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         isScrolled
-          ? 'bg-[#07080B]/95 backdrop-blur-xl border-b border-white/[0.08] py-3.5 shadow-2xl'
-          : 'bg-gradient-to-b from-black/90 via-black/40 to-transparent py-5'
+          ? 'bg-[#07080B]/95 backdrop-blur-xl border-b border-white/[0.08] py-4 shadow-2xl'
+          : 'bg-gradient-to-b from-black/90 via-black/40 to-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 90% Screen Width Container with Generous Breathing Room */}
+      <div className="w-[90%] max-w-[1760px] mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between">
           
           {/* Logo & Brand Indicator */}
-          <div className="flex items-center gap-4">
-            <a href="#hero" className="flex items-center group focus-visible:ring-2 focus-visible:ring-rose-500 rounded-lg">
+          <div className="flex items-center gap-6 xl:gap-8">
+            <a href="#hero" className="flex items-center group focus-visible:ring-2 focus-visible:ring-red-500 rounded-lg">
               <Espaco10Logo variant="horizontal" theme="dark" size="sm" />
             </a>
             
+            <div className="hidden xl:block h-6 w-[1px] bg-white/[0.08]" aria-hidden="true" />
+
             <button
               onClick={() => setIsBrandGuideOpen(true)}
-              className="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-medium tracking-wider uppercase bg-white/[0.04] text-zinc-300 border border-white/[0.08] hover:border-red-500/40 hover:text-white transition-all cursor-pointer"
+              className="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[10.5px] font-sans font-medium tracking-[0.16em] uppercase bg-white/[0.04] text-zinc-300 border border-white/[0.08] hover:border-red-500/40 hover:text-white transition-all cursor-pointer"
               title="Estudo de modernização e guia editorial da marca"
             >
-              <Sparkles className="w-3 h-3 text-red-500" aria-hidden="true" />
+              <Sparkles className="w-3.5 h-3.5 text-red-500" aria-hidden="true" />
               <span>Manual de Identidade</span>
             </button>
           </div>
 
-          {/* Desktop Navigation Links (Forbes / Luxury Editorial Style) */}
-          <nav className="hidden lg:flex items-center gap-7 text-[11px] font-medium tracking-[0.16em] uppercase text-zinc-300">
+          {/* Desktop Navigation Links (Forbes / Luxury Editorial Style with Generous Breathing Room) */}
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-11 text-[11.5px] font-sans font-medium tracking-[0.18em] uppercase text-zinc-300">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -77,8 +80,8 @@ export const LandingNavbar: React.FC<LandingNavbarProps> = ({ onOpenInquiryList 
             ))}
           </nav>
 
-          {/* Right Action Icons */}
-          <div className="flex items-center gap-3">
+          {/* Right Action Icons with Elegant Spacing */}
+          <div className="flex items-center gap-4 xl:gap-5">
             {/* Inquiry List Button */}
             <button
               onClick={onOpenInquiryList}
@@ -100,7 +103,7 @@ export const LandingNavbar: React.FC<LandingNavbarProps> = ({ onOpenInquiryList 
                 setView('dashboard');
                 setDashboardTab('overview');
               }}
-              className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-red-800 to-red-950 hover:from-red-700 hover:to-red-900 border border-red-700/40 text-white text-xs font-semibold tracking-wide transition-all shadow-xl shadow-red-950/40 hover:scale-[1.02] cursor-pointer"
+              className="hidden sm:flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-800 to-red-950 hover:from-red-700 hover:to-red-900 border border-red-700/40 text-white text-xs font-semibold tracking-wide transition-all shadow-xl shadow-red-950/40 hover:scale-[1.02] cursor-pointer"
             >
               <LayoutDashboard className="w-3.5 h-3.5 text-red-300" aria-hidden="true" />
               <span>Painel do Lojista</span>
