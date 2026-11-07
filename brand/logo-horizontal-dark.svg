@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" fill="none">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+  </defs>
+  <!-- Monogram Icon (Left) -->
+  <rect x="6" y="10" width="80" height="80" rx="18" fill="#12141A" stroke="#252A35" stroke-width="2"/>
+  <path d="M 23 30 H 44 V 37 H 32 V 46 H 42 V 53 H 32 V 62 H 44 V 70 H 23 Z" fill="#FFFFFF"/>
+  <path d="M 48 38 L 54 30 H 60 V 70 H 52 V 41 L 48 44 Z" fill="url(#redGrad)"/>
+  <path d="M 64 41 C 64 33 68 30 74 30 C 80 30 84 33 84 41 V 59 C 84 67 80 70 74 70 C 68 70 64 67 64 59 Z M 71 43 V 57 C 71 61 72 63 74 63 C 76 63 77 61 77 57 V 43 C 77 39 76 37 74 37 C 72 37 71 39 71 43 Z" fill="#FFFFFF"/>
+  <rect x="23" y="76" width="61" height="2.5" rx="1.25" fill="#E11D48"/>
+
+  <!-- Divider Line -->
+  <line x1="104" y1="24" x2="104" y2="76" stroke="#2D333F" stroke-width="1.5"/>
+
+  <!-- Typography: ESPAÇO -->
+  <text x="120" y="58" font-family="'Syne', 'Inter', -apple-system, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="4">ESPAÇO</text>
+  
+  <!-- Number 10 with accent badge -->
+  <rect x="332" y="24" width="70" height="42" rx="8" fill="url(#redGrad)"/>
+  <text x="345" y="56" font-family="'Syne', 'Inter', -apple-system, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" letter-spacing="1">10</text>
+  
+  <!-- Subtitle Tagline -->
+  <text x="122" y="77" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#9CA3AF" letter-spacing="3.5">MODA FEMININA &amp; MASCULINA • DESDE 2007</text>
+</svg>
